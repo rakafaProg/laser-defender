@@ -16,7 +16,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] Vector3 lastSpawnedLifePosition;
     [SerializeField] GameObject[] livesGameObjects;
 
+    int toNextLevel = 1000;
+
     Quaternion quaternion;
+    PlayerManager activePlayer;
 
     bool gameStarted = false;
 
@@ -26,6 +29,8 @@ public class GameManager : MonoBehaviour
         quaternion = new Quaternion();
         UpdateScoreUI();
         InitiateLifeState();
+
+        activePlayer = FindObjectOfType<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -39,8 +44,19 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetMouseButton(1))
         {
-            score += 34;
-            UpdateScoreUI();
+            AddScore();
+        }
+    }
+
+    void AddScore()
+    {
+        score += 34;
+        toNextLevel -= 34;
+        UpdateScoreUI();
+        if (toNextLevel <= 0)
+        {
+            activePlayer.UpgradeLevel();
+            toNextLevel = 1000;
         }
     }
 

@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -218.5, y: -73}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: -275.7, y: -152.5}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6130071856856982082
 CanvasRenderer:
@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -182,8 +182,8 @@ MonoBehaviour:
   life: 0
   scoreText: {fileID: 6130071856856982081}
   lifeSprite: {fileID: 4355290726996444547, guid: d0a2b28d4424945d188dd32ac096a86a, type: 3}
-  firstLifePosition: {x: -6, y: 4.2, z: -5}
-  distanceBetweenLifeSprites: {x: 0.5, y: 0, z: 0}
+  firstLifePosition: {x: 2.63, y: 4.65, z: -5}
+  distanceBetweenLifeSprites: {x: -0.5, y: 0, z: 0}
   lastSpawnedLifePosition: {x: 0, y: 0, z: 0}
   livesGameObjects:
   - {fileID: 0}
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
