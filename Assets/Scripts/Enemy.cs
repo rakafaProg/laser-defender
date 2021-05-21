@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] List<Transform> enemyRoute;
-    [SerializeField] float enemySpeed = 2f; 
+    List<Vector2> enemyRoute;
+    [SerializeField] float enemySpeed = 2f;
+
+    [SerializeField] WaveConfig waveConfig;
 
     int routePointPos = 0;
 
@@ -14,7 +16,8 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = enemyRoute[routePointPos].transform.position;
+        enemyRoute = waveConfig.GetWayPoints();
+        transform.position = enemyRoute[routePointPos];
         SetNextTarget();
     }
 
@@ -39,6 +42,6 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        currentTarget = enemyRoute[routePointPos].transform.position;
+        currentTarget = enemyRoute[routePointPos];
     }
 }
