@@ -16,36 +16,42 @@ public class GameManager : MonoBehaviour
     [SerializeField] Vector3 lastSpawnedLifePosition;
     [SerializeField] GameObject[] livesGameObjects;
 
-    int toNextLevel = 1000;
+    [SerializeField] float shootingInterval = 0.25f;
 
-    Quaternion quaternion;
+    int toNextLevel = 1000;
+    int level = 0;
+
     PlayerManager activePlayer;
+    Laser laser;
+
+    bool isShooting = false;
+    Coroutine shootingCorotine;
+
 
     bool gameStarted = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        quaternion = new Quaternion();
         UpdateScoreUI();
+
         InitiateLifeState();
 
         activePlayer = FindObjectOfType<PlayerManager>();
+        laser = FindObjectOfType<Laser>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!gameStarted) return;
-        if (Input.GetMouseButtonDown(0))
-        {
-            LooseLife();
-        }
 
-        if (Input.GetMouseButton(1))
-        {
-            AddScore();
-        }
+        HandlePlayerShooting();
+
+        //if (Input.GetMouseButton(1))
+        //{
+        //    AddScore();
+        //}
     }
 
     void AddScore()
@@ -55,7 +61,8 @@ public class GameManager : MonoBehaviour
         UpdateScoreUI();
         if (toNextLevel <= 0)
         {
-            activePlayer.UpgradeLevel();
+            level++;
+            activePlayer.SetLevel(level);
             toNextLevel = 1000;
         }
     }
@@ -69,7 +76,7 @@ public class GameManager : MonoBehaviour
     {
         if (life == MAX_LIFE - 1) return;
         Vector3 newPosition = firstLifePosition + (distanceBetweenLifeSprites * (life));
-        livesGameObjects[life] = Instantiate(lifeSprite, newPosition, quaternion);
+        livesGameObjects[life] = Instantiate(lifeSprite, newPosition, Quaternion.identity);
         life++;
     }
 
@@ -85,6 +92,24 @@ public class GameManager : MonoBehaviour
         Destroy(livesGameObjects[life]);
     }
 
+
+    void HandlePlayerShooting () {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            isShooting = true;
+            shootingCorotine = StartCoroutine(InifinetShooting());
+        }
+        else if (Input.GetButtonUp("Fire1"))
+        {
+            isShooting = false;
+            if (shootingCorotine != null)
+            {
+                StopCoroutine(shootingCorotine);
+            }
+        }
+    }
+
+
     void InitiateLifeState ()
     {
         life = 0;
@@ -93,5 +118,13 @@ public class GameManager : MonoBehaviour
             AddLife();
         }
         gameStarted = true;
+    }
+
+    IEnumerator InifinetShooting ()
+    {
+        while (isShooting) {
+            laser.Shoot(level, activePlayer.transform.position);
+            yield return new WaitForSeconds(shootingInterval);
+        }
     }
 }

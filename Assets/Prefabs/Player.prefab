@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8760877208985366691}
   - component: {fileID: 8760877208985366690}
   - component: {fileID: 8570452695142370920}
+  - component: {fileID: 8760877209930623400}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -95,3 +96,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24d8023dad254d3f91a672498b5b94b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelSprites:
+  - {fileID: 21300000, guid: 0f4e7e150f01f4cfe9e9b4f719c858b4, type: 3}
+  - {fileID: 21300000, guid: f716b37c50e8246848b6f3162c13172b, type: 3}
+  - {fileID: 21300000, guid: 5ba543d5ae90f41d293322ca50f9141c, type: 3}
+  - {fileID: 21300000, guid: 578423a92df8a408ba12f056a012cd51, type: 3}
+  - {fileID: 21300000, guid: 285c310be6e0147ac8b8a6554535e7df, type: 3}
+  - {fileID: 21300000, guid: 54d38de29c50e4cbb8e77c0416e555c5, type: 3}
+  - {fileID: 21300000, guid: 2f3df591dac0a4800939804373ca5f88, type: 3}
+  - {fileID: 21300000, guid: 439dc00e0785145a39a734e572b9bc95, type: 3}
+  - {fileID: 21300000, guid: a8215c597d39d4409a1b587f2d38cc7d, type: 3}
+  - {fileID: 21300000, guid: a6ca63c3b3aba4f02b682cd8e276068f, type: 3}
+  - {fileID: 21300000, guid: 2d607721390494075b4a2c86c5e82bff, type: 3}
+  - {fileID: 21300000, guid: 5e717b2985afd4d79bd3be3d5a95c448, type: 3}
+  screenUnitsWidth: 18
+  screenUnitsHeight: 30
+  movmentSpeed: 12
+--- !u!114 &8760877209930623400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8760877208985366693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc374798faccd4449a6fe90967a18270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserObjects:
+  - {fileID: 8766024676483163341, guid: 0db28f82a33524123a827930a930a9db, type: 3}
+  - {fileID: 2609405989290787208, guid: eaa931b39a7ec40a6b355bf6a816b41a, type: 3}
+  - {fileID: 7288872662694200366, guid: b9923c9d5671746b485c534affa649f7, type: 3}
+  - {fileID: 1726549184275530707, guid: da6d0f221b99a43c98bcde61fd1eda83, type: 3}
+  - {fileID: 7133456219256050357, guid: 40a1be5a15a74450cb03b368b61bfc89, type: 3}
+  - {fileID: 7280471817474186776, guid: 6d52a17773ecf4c9ba7e75816bf48d7c, type: 3}
+  - {fileID: 8952623947587151345, guid: ca24f7e99a45b48a8a18d3348a21fb7e, type: 3}
+  - {fileID: 4917313103521775101, guid: 15a9281421c214e8a87edf7c54bc1b7e, type: 3}
+  - {fileID: 1274245133402334351, guid: 3cf6135b933474dd2982921a6b33fd80, type: 3}
+  - {fileID: 1002786363151771581, guid: 004ca60083d274b14ac904b03e09e518, type: 3}
+  - {fileID: 2739331405836086766, guid: 12c3a740fe05a48e98f222865055513c, type: 3}
+  - {fileID: 6400721041061415413, guid: 378c93e0ec3164ce488fa670414e89d9, type: 3}
+  shootingSound: {fileID: 8300000, guid: 77540d57c2e8047e1962d914345d01ef, type: 3}
+  bulletSpeed: 10
