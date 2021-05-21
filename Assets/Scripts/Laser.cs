@@ -25,11 +25,18 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.ToString().Equals(worldBordersColiderName))
+        if (collision.tag == "WorldBorder")
         {
             // destory lasers that got outside the world context
             Destroy(gameObject);
         }
+
+        else if (collision.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
