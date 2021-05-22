@@ -10,9 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8944654109255914861}
   - component: {fileID: 2750939750535406735}
-  m_Layer: 0
+  - component: {fileID: 4003632831843399341}
+  - component: {fileID: 4796788854539792462}
+  - component: {fileID: 3942706506407259016}
+  - component: {fileID: 2271080099176121340}
+  m_Layer: 8
   m_Name: Enemy Laser 01 Content
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,6 +86,98 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &4003632831843399341
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107809442057130467}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!60 &4796788854539792462
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107809442057130467}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8, y: 0.76666665}
+    newSize: {x: 0.8, y: 0.76666665}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.32352108, y: 0.07251152}
+      - {x: 0.10050028, y: 0.09812857}
+      - {x: 0.083333336, y: 0.38333336}
+      - {x: -0.045527816, y: 0.3857864}
+      - {x: -0.07758516, y: 0.3264753}
+      - {x: -0.086548485, y: 0.08890949}
+      - {x: -0.34603265, y: 0.075974144}
+      - {x: -0.40000004, y: 0.020851046}
+      - {x: -0.35829794, y: -0.074818455}
+      - {x: -0.09827316, y: -0.10779313}
+      - {x: -0.05389657, y: -0.36370882}
+      - {x: 0.06219448, y: -0.3661619}
+      - {x: 0.1033918, y: -0.10425967}
+      - {x: 0.3681102, y: -0.051948283}
+      - {x: 0.38528168, y: 0.047042154}
+--- !u!114 &3942706506407259016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107809442057130467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098a8c83d5c594ea7bf4c7000dead18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageLevel: 50
+  destroyOnCollision: 1
+--- !u!114 &2271080099176121340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107809442057130467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b79635fc7f0f4788bde51bb7198ab4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  scoreOnDeath: 0
+  destroyOnDeath: 1
+  looseShieldOnDeath: 0
+  soundOnDestruction: {fileID: 8300000, guid: b665d5134fa4a4f11a5b3a10ac528ca1, type: 3}
 --- !u!1 &4094055269016574541
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,9 +187,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2192052693748186955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyLaser 01
-  m_TagString: Untagged
+  m_TagString: EnemyLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

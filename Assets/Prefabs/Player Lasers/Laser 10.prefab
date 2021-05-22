@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3985889108399260696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8939113911988868319}
   - component: {fileID: 7454436250937643426}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser 10 Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 699176854753860336}
   - component: {fileID: 4466221232314941707}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser 10 Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971086519167461368}
   - component: {fileID: 8106426779550340829}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Laser 10 Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}

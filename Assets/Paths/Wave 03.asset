@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9494594c63ae8459a9b3398d7c5ba0f9, type: 3}
+  m_Name: Wave 03
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 5288093908791253480, guid: 6b0ed1a64d6984000b02c19403aea104, type: 3}
+  pathPrefab: {fileID: 8367805443148243063, guid: 03e1305fc35ca4721b2dc86da0a22c0a, type: 3}
+  laserPrefab: {fileID: 4094055269016574541, guid: 786d9e08245c84c369e0ab03656d01cc, type: 3}
+  enemySpriteOptions:
+  - {fileID: 21300000, guid: ea50d57fe93db42f492a234dbc9f210c, type: 3}
+  - {fileID: 21300000, guid: e99319e886fd646ab99646e1fb558d7c, type: 3}
+  - {fileID: 21300000, guid: 32d0d557b79664b2e9c489c2204224ce, type: 3}
+  - {fileID: 21300000, guid: dbe23d4fd78b947c7883173e0f4e627e, type: 3}
+  - {fileID: 21300000, guid: 61dd0430abb9b4a82aeb52cd062b347f, type: 3}
+  spawnInterval: 1.3
+  spawnRandFactor: 0.3
+  enemySpeed: 10
+  numberOfEnemies: 8
+  enemyHealth: 100

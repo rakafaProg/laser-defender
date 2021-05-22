@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 5288093908791253481}
   - component: {fileID: 5288093908791253484}
   - component: {fileID: 5288093908791253483}
-  m_Layer: 0
+  - component: {fileID: -6632686210628280088}
+  - component: {fileID: -2436467870781277862}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -96,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7382f442eef574c79bd4d77d04993e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyRoute: []
+  destructionSound: {fileID: 8300000, guid: c7e082739a3f44be09f9940de1f466cd, type: 3}
 --- !u!60 &5288093908791253483
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -157,3 +159,34 @@ PolygonCollider2D:
       - {x: -0.2001723, y: -0.26396108}
       - {x: 0.19454041, y: -0.26609263}
       - {x: 0.24166667, y: -0.26666668}
+--- !u!114 &-6632686210628280088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5288093908791253480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098a8c83d5c594ea7bf4c7000dead18c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageLevel: 150
+  destroyOnCollision: 0
+--- !u!114 &-2436467870781277862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5288093908791253480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b79635fc7f0f4788bde51bb7198ab4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 300
+  scoreOnDeath: 250
+  destroyOnDeath: 1
+  looseShieldOnDeath: 0
+  soundOnDestruction: {fileID: 8300000, guid: c7e082739a3f44be09f9940de1f466cd, type: 3}

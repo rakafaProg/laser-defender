@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9494594c63ae8459a9b3398d7c5ba0f9, type: 3}
-  m_Name: Wave 01
+  m_Name: Wave 02
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 5288093908791253480, guid: 6b0ed1a64d6984000b02c19403aea104, type: 3}
-  pathPrefab: {fileID: 9160181299074807145, guid: eac3f835487a34602ba4518c898433c5, type: 3}
+  pathPrefab: {fileID: 6474094763509628610, guid: 77ef17f86b0224dbe8eb254bbd5f5b78, type: 3}
   laserPrefab: {fileID: 4094055269016574541, guid: 786d9e08245c84c369e0ab03656d01cc, type: 3}
   enemySpriteOptions:
   - {fileID: 21300000, guid: 2764ee205c2b749529f0a41e8e6ff212, type: 3}
@@ -36,8 +36,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dbe23d4fd78b947c7883173e0f4e627e, type: 3}
   - {fileID: 21300000, guid: 61dd0430abb9b4a82aeb52cd062b347f, type: 3}
   - {fileID: 21300000, guid: ea50d57fe93db42f492a234dbc9f210c, type: 3}
-  spawnInterval: 2
+  spawnInterval: 1
   spawnRandFactor: 0.3
-  enemySpeed: 5
-  numberOfEnemies: 3
+  enemySpeed: 4
+  numberOfEnemies: 5
   enemyHealth: 100

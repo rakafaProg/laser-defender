@@ -9,12 +9,12 @@ public class Laser : MonoBehaviour
     [SerializeField] AudioClip shootingSound;
     [SerializeField] float bulletSpeed = 10f;
 
-    string worldBordersColiderName = "World Walls";
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -23,21 +23,7 @@ public class Laser : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "WorldBorder")
-        {
-            // destory lasers that got outside the world context
-            Destroy(gameObject);
-        }
 
-        else if (collision.tag == "Enemy")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
-
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

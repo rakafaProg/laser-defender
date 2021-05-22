@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - WorldBorder
+  - PlayerLaser
+  - EnemyLaser
+  - PlayerBody
   layers:
   - Default
   - TransparentFX
@@ -13,11 +16,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Enemy Laser
+  - Player Laser
+  - World Walls
   - 
   - 
   - 

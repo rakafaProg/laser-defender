@@ -54,16 +54,19 @@ public class GameManager : MonoBehaviour
         //}
     }
 
-    void AddScore()
+    public void AddScore(int score)
     {
-        score += 34;
-        toNextLevel -= 34;
+        if (score <= 0) return;
+        toNextLevel -= score;
+        this.score += score;
+        Debug.Log("changing score to " + this.score + " to next level " + toNextLevel);
         UpdateScoreUI();
-        if (toNextLevel <= 0)
+        if (toNextLevel < 0)
         {
             level++;
             activePlayer.SetLevel(level);
             toNextLevel = 1000;
+            AddLife();
         }
     }
 
@@ -75,12 +78,18 @@ public class GameManager : MonoBehaviour
     void AddLife()
     {
         if (life == MAX_LIFE - 1) return;
+        if (life < 0) life = 0;
         Vector3 newPosition = firstLifePosition + (distanceBetweenLifeSprites * (life));
         livesGameObjects[life] = Instantiate(lifeSprite, newPosition, Quaternion.identity);
         life++;
     }
 
-    void LooseLife()
+    public void TakeDamage()
+    {
+
+    }
+
+    public void LooseLife()
     {
         life--;
         if (life < 0)

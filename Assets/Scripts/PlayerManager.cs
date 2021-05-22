@@ -19,13 +19,27 @@ public class PlayerManager : MonoBehaviour
 
     SpriteRenderer mySpriteRenderer;
 
+    GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        gameManager = FindObjectOfType<GameManager>();
+
         SetLevel(0);
         SetMovemntBoundries();
     }
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    DamageDealer damager = collision.GetComponent<DamageDealer>();
+    //    if (damager != null)
+    //    {
+    //        gameManager.LooseHealth(damager.GetDamage());
+    //        damager.OnHit();
+    //    }
+    //}
 
     void SetMovemntBoundries()
     {
@@ -75,4 +89,7 @@ public class PlayerManager : MonoBehaviour
             mySpriteRenderer.sprite = levelSprites[level];
         }
     }
+
+
+   
 }
